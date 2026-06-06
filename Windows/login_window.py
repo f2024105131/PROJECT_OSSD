@@ -82,7 +82,7 @@ def __init__(self, parent,switch_callback):
             
             subtitle_label= tk.Label(
                 self.form_container,
-                text="Professional Laundary Management Syatem",
+                text="Daagh Achay Hai",
                 font=('Helvetica', 10),
                 bg='white',
                 fg=self.COLORS['text']
