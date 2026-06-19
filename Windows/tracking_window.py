@@ -37,7 +37,7 @@ class TrackingWindow(tk.Frame):
 # Status options
     STATUS_OPTIONS = ['Pending', 'InProgress', 'Completed', 'Failed']
     def __init__(self, parent, go_back_callback):
-super().__init__(parent, bg=self.COLORS['bg'])
+        super().__init__(parent, bg=self.COLORS['bg'])
         self.parent = parent
         self.go_back_callback = go_back_callback
         self.current_tracking_id = None
@@ -81,7 +81,7 @@ def create_header(self):
             pady=8,
             command=self.go_back_callback
         )
-back_btn.grid(row=0, column=0, padx=20, pady=15, sticky='w')
+        back_btn.grid(row=0, column=0, padx=20, pady=15, sticky='w')
 # Hover effect
         def on_enter(e):
             back_btn.config(bg=self.COLORS['primary'])
@@ -108,8 +108,8 @@ back_btn.grid(row=0, column=0, padx=20, pady=15, sticky='w')
         )
         self.stats_label.grid(row=0, column=2, padx=20, pady=15, sticky='e')
         
-    def create_main_content(self):
-        """Creates the main content area with form and table."""
+        def create_main_content(self):
+            """Creates the main content area with form and table."""
         main_container = tk.Frame(self, bg=self.COLORS['bg'])
         main_container.grid(row=1, column=0, sticky="nsew", padx=20, pady=20)
         main_container.grid_rowconfigure(0, weight=1)
@@ -154,7 +154,7 @@ def create_form_panel(self, parent):
         scrollbar.pack(side="right", fill="y")
 # Form fields
         self.create_form_fields(scrollable_frame)
-    def create_form_fields(self, parent):
+def create_form_fields(self, parent):
         """Creates all form input fields."""
         fields_frame = tk.Frame(parent, bg=self.COLORS['card_bg'])
         fields_frame.pack(fill='both', padx=25, pady=20)
@@ -166,7 +166,7 @@ def create_form_panel(self, parent):
             bg=self.COLORS['card_bg'],
             fg=self.COLORS['text']
         ).grid(row=0, column=0, sticky='w', pady=(0, 5))
-self.order_combo = ttk.Combobox(
+        self.order_combo = ttk.Combobox(
             fields_frame,
             font=('Helvetica', 11),
             state='readonly',
@@ -197,7 +197,7 @@ self.order_combo = ttk.Combobox(
             bg=self.COLORS['card_bg'],
             fg=self.COLORS['text']
         ).grid(row=4, column=0, sticky='w', pady=(0, 5))
-self.staff_combo = ttk.Combobox(
+        self.staff_combo = ttk.Combobox(
             fields_frame,
             font=('Helvetica', 11),
             state='readonly',
@@ -215,7 +215,7 @@ self.staff_combo = ttk.Combobox(
         
         time_frame = tk.Frame(fields_frame, bg=self.COLORS['card_bg'])
         time_frame.grid(row=7, column=0, columnspan=2, sticky='ew', pady=(0, 15))
-self.start_time_entry = tk.Entry(
+        self.start_time_entry = tk.Entry(
             time_frame,
             font=('Helvetica', 11),
             bg='#FAFAFA',
@@ -236,7 +236,7 @@ tk.Button(
             command=self.set_start_time_now
         ).pack(side='left', padx=(10, 0))
 # End Time
-        tk.Label(
+tk.Label(
             fields_frame,
             text="End Time:",
             font=('Helvetica', 11, 'bold'),
@@ -254,7 +254,7 @@ tk.Button(
         )
         self.end_time_entry.grid(row=9, column=0, columnspan=2, sticky='ew', pady=(0, 15), ipady=5)
 # Status
-        tk.Label(
+tk.Label(
             fields_frame,
             text="Status:",
             font=('Helvetica', 11, 'bold'),
@@ -268,11 +268,11 @@ tk.Button(
             state='readonly',
             font=('Helvetica', 11),
             width=33
-        )
-        self.status_combo.grid(row=11, column=0, columnspan=2, sticky='ew', pady=(0, 15), ipady=5)
-        self.status_combo.set('Pending')
+            )
+self.status_combo.grid(row=11, column=0, columnspan=2, sticky='ew', pady=(0, 15), ipady=5)
+self.status_combo.set('Pending')
 # Notes
-        tk.Label(
+tk.Label(
             fields_frame,
             text="Notes:",
             font=('Helvetica', 11, 'bold'),
