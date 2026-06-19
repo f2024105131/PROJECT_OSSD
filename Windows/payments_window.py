@@ -1,10 +1,3 @@
-"""
-TeddyShine Laundry Management System - Payments Window Module
-Color Theme: Light Greenish-Gray (#E8F0E6 background style)
-Module: payments_window.py
-Purpose: Record payments against invoices and view payment history
-"""
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 from datetime import datetime
@@ -19,10 +12,6 @@ from helpers import (
 
 
 class PaymentsWindow(tk.Frame):
-    """
-    Payments Window - Record payments against invoices and view payment history.
-    Provides tabs for Payment Recording and Payment History.
-    """
     
     COLORS = {
         'bg': '#E8F0E6',
@@ -729,8 +718,6 @@ class PaymentsWindow(tk.Frame):
         if not transaction_id:
             transaction_id = f"TXN-{datetime.now().strftime('%Y%m%d%H%M%S')}"
             
-        current_user = get_current_user()
-        
         conn = get_connection()
         try:
             cursor = conn.cursor()
