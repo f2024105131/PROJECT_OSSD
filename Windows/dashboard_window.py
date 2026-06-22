@@ -42,7 +42,7 @@ class DashboardWindow(tk.Frame):
             'title': 'Orders',
             'icon': '📋',
             'description': 'Create & track laundry orders',
-            'color': '#388E3C',
+            'color': '#2E7D32',
             'admin_only': False,
             'row': 0,
             'col': 1
@@ -51,7 +51,7 @@ class DashboardWindow(tk.Frame):
             'title': 'Services',
             'icon': '🧺',
             'description': 'Manage laundry services',
-            'color': '#43A047',
+            'color': '#2E7D32',
             'admin_only': False,
             'row': 0,
             'col': 2
@@ -60,7 +60,7 @@ class DashboardWindow(tk.Frame):
             'title': 'Staff',
             'icon': '👨‍🔧',
             'description': 'Manage staff members',
-            'color': '#4CAF50',
+            'color': '#2E7D32',
             'admin_only': True,
             'row': 1,
             'col': 0
@@ -69,7 +69,7 @@ class DashboardWindow(tk.Frame):
             'title': 'Tracking',
             'icon': '📍',
             'description': 'Track order progress',
-            'color': '#66BB6A',
+            'color': '#2E7D32',
             'admin_only': False,
             'row': 1,
             'col': 1
@@ -78,7 +78,7 @@ class DashboardWindow(tk.Frame):
             'title': 'Invoices',
             'icon': '📄',
             'description': 'View & manage invoices',
-            'color': '#81C784',
+            'color': '#2E7D32',
             'admin_only': False,
             'row': 1,
             'col': 2
@@ -87,16 +87,16 @@ class DashboardWindow(tk.Frame):
             'title': 'Payments',
             'icon': '💰',
             'description': 'Process payments',
-            'color': '#A5D6A7',
+            'color': '#2E7D32',
             'admin_only': False,
-            'row': 2,
+            'row': 1,
             'col': 0
         },
         'reports': {
             'title': 'Reports',
             'icon': '📊',
             'description': 'View analytics & reports',
-            'color': '#C8E6C9',
+            'color': '#2E7D32',
             'admin_only': True,
             'row': 2,
             'col': 1
